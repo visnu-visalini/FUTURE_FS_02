@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniMart | Home & Kitchen</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">MiniMart</a></div>
+    <input type="text" id="search" placeholder="Search in home & kitchen..." />
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-icon">🛒 Cart</a>
+    </div>
+  </nav>
+
+  <!-- Page Heading -->
+  <section class="hero">
+    <h1>Home & Kitchen</h1>
+    <p>Top picks for your home and cooking needs.</p>
+  </section>
+
+  <!-- Product List -->
+  <section class="products">
+    <div class="product-list" id="home-products">
+      <!-- Home & Kitchen products -->
+      <div class="product-card">
+        <img
+          src="https://www.ikea.com/in/en/images/products/dvaergkraefta-7-piece-cookware-set__1401219_pe969000_s5.jpg?f=s"
+          alt="Cookware" />
+        <h4>Stainless Steel Cookware Set</h4>
+        <p>₹2,199</p>
+        <a href="product.html?id=301" class="btn">View</a>
+        <button onclick="addToCart(301)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://jamesandco.in/wp-content/uploads/2024/09/61Vt8i4F8gL._SL1500.jpg" alt="Vacuum Cleaner" />
+        <h4>Smart Vacuum Cleaner</h4>
+        <p>₹3,999</p>
+        <a href="product.html?id=302" class="btn">View</a>
+        <button onclick="addToCart(302)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReZqfqR_bCorAv0pXVsscPEDwpM5_2LiUNOA&s"
+          alt="Blender" />
+        <h4>Electric Blender</h4>
+        <p>₹1,299</p>
+        <a href="product.html?id=303" class="btn">View</a>
+        <button onclick="addToCart(303)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MiniMart. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(productId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(productId);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Product added to cart!");
+    }
+  </script>
+</body>
+
+</html>

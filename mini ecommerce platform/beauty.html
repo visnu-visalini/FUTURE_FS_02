@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniMart | Beauty</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">MiniMart</a></div>
+    <input type="text" id="search" placeholder="Search beauty products..." />
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-icon">🛒 Cart</a>
+    </div>
+  </nav>
+
+  <!-- Page Heading -->
+  <section class="hero">
+    <h1>Beauty Products</h1>
+    <p>Explore top skincare, makeup, and more.</p>
+  </section>
+
+  <!-- Product List -->
+  <section class="products">
+    <div class="product-list" id="beauty-products">
+      <!-- Beauty Products -->
+      <div class="product-card">
+        <img src="https://images-static.nykaa.com/media/catalog/product/6/a/6a9866c8901138504519.jpg"
+          alt="Face Cream" />
+        <h4>Glow Face Cream</h4>
+        <p>₹499</p>
+        <a href="product.html?id=401" class="btn">View</a>
+        <button onclick="addToCart(401)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqWT5xpRX2jbzAIPwCrG3TDX5FXN7Y6zkhhg&s"
+          alt="Makeup Kit" />
+        <h4>Pro Makeup Kit</h4>
+        <p>₹1,299</p>
+        <a href="product.html?id=402" class="btn">View</a>
+        <button onclick="addToCart(402)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://www.vilvahstore.com/cdn/shop/files/Vilvah_herbal_shampoo.jpg?v=1750662731" alt="Shampoo" />
+        <h4>Herbal Shampoo 500ml</h4>
+        <p>₹349</p>
+        <a href="product.html?id=403" class="btn">View</a>
+        <button onclick="addToCart(403)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MiniMart. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(productId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(productId);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Product added to cart!");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniMart | Electronics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">MiniMart</a></div>
+    <input type="text" id="search" placeholder="Search in electronics..." />
+    <div class="nav-actions">
+      <a href="cart.html" class="cart-icon">🛒 Cart</a>
+    </div>
+  </nav>
+
+  <!-- Page Heading -->
+  <section class="hero">
+    <h1>Electronics</h1>
+    <p>Shop the latest gadgets, appliances, and more.</p>
+  </section>
+
+  <!-- Product List -->
+  <section class="products">
+    <div class="product-list" id="electronics-products">
+      <!-- Electronics products -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200.png?text=Laptop" alt="Laptop" />
+        <h4>HP Pavilion Laptop</h4>
+        <p>₹54,990</p>
+        <a href="product.html?id=101" class="btn">View</a>
+        <button onclick="addToCart(101)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200.png?text=Phone" alt="Phone" />
+        <h4>Samsung Galaxy M14</h4>
+        <p>₹12,999</p>
+        <a href="product.html?id=102" class="btn">View</a>
+        <button onclick="addToCart(102)">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200x200.png?text=Headphones" alt="Headphones" />
+        <h4>Boat Wireless Headphones</h4>
+        <p>₹1,499</p>
+        <a href="product.html?id=103" class="btn">View</a>
+        <button onclick="addToCart(103)">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 MiniMart. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function addToCart(productId) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(productId);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Product added to cart!");
+    }
+  </script>
+</body>
+
+</html>

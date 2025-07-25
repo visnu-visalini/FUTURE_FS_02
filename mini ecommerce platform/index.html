@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniMart | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">MiniMart</div>
+    <input type="text" placeholder="Search for products..." class="search-bar" />
+    <div class="nav-links">
+      <a href="cart.html">🛒 Cart</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to MiniMart</h1>
+    <p>Discover top deals on fashion, electronics, home and more!</p>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <a href="electronics.html" class="category-card">Electronics</a>
+      <a href="fashion.html" class="category-card">Fashion</a>
+      <a href="home&kitchen.html" class="category-card">Home & Kitchen</a>
+      <a href="beauty.html" class="category-card">Beauty</a>
+      <a href="book.html" class="category-card">Books</a>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="products">
+    <h2>Top Picks for You</h2>
+    <div class="product-list">
+      <div class="product-card">
+        <img
+          src="data:image/jpeg;base64,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"
+          alt="Headphones" />
+        <h3>Wireless Headphones</h3>
+        <p>$39.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTuN8PDwayeu2I04UmoKPxg6S6-sXwMdphhyk0B-HW-Pp4v0UnAW9PHXc-d3o7sQekTG5e60TW4SnftavGBE1ufApJxicRJvCUt5u2oDSUV"
+          alt="Shirt" />
+        <h3>Men's T-Shirt</h3>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQrD9d2izeAwsoDGqLb0P8FOz5RpUIS1M3dUrtPEoMKXd1mezLvXpo6dWafEjI16hKXroA8o2wZzkGBY9dRuYsLeIKwM64uGX4R61PMbIHtqWvoa4HxKmWAfYOKZaPfg2BXoxgPxGibaQ&usqp=CAc"
+          alt="geG4j6qw6jxX7w8xRNV0S7TFu7gFh7w8PH0p0TK4JjY9dwdiPWoWx1PsjySDI8aPmlimTtFbfxU71vi3Zu95JAQ4yKhJJRFJy52HQmiry5IyCcj7wqHuJeY7UuV0aJRbgDZ9mpM9yoGzVDBm267fhWocAeyibinRG1TU7uewjlP8AhVEYJkX7xz3Hu8etJefoeLPDfyDY8rr4MK4s1s5y9pv4hsCtog9glmDm4124I" />
+        <h3>Raaha Watch</h3>
+        <p>$49.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MiniMart. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
